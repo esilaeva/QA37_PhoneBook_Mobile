@@ -14,6 +14,9 @@ public class AuthenticationScreen extends BaseScreen {
         super(driver);
     }
 
+    @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/action_bar']/android.widget.TextView")
+    AndroidElement activityTextView;
+
     @FindBy(xpath = "//*[@resource-id='com.sheygam.contactapp:id/inputEmail']")
     AndroidElement emailEditText;
 
@@ -58,6 +61,10 @@ public class AuthenticationScreen extends BaseScreen {
         Assert.assertTrue(alert.getText().contains(text));
         alert.accept();
         return this;
+    }
+
+    public String titlePage() {
+        return activityTextView.getText();
     }
 
 }

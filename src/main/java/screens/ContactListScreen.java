@@ -25,13 +25,12 @@ public class ContactListScreen extends BaseScreen {
     }
 
     public boolean isActivityTitleDisplayed(String text) {
-        //return activityTextView.getText().contains("Contact list");
         return isShouldHave(activityTextView, text, 8);
     }
 
     public AuthenticationScreen logout() {
-        menuOptions.click();
-        logoutButton.click();
+            menuOptions.click();
+            logoutButton.click();
         return new AuthenticationScreen(driver);
     }
 

@@ -31,4 +31,6 @@ public class BaseScreen {
     public void should(AndroidElement element, int time) {
         new WebDriverWait(driver, time).until((ExpectedConditions.visibilityOf(element)));
     }
+
+
 }
